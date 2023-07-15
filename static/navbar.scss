@@ -1,0 +1,164 @@
+@use "global.scss";
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #navcontainer {
+        display: flex;
+        flex-direction: column;
+
+        #mainnavcontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0px 15px;
+            height: 3.5rem;
+
+            > * + * {
+                margin-left: 10px;
+            }
+
+        }
+
+        #dropdownnavcontainer {
+            height: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            overflow-y: hidden;
+            transition: 500ms;
+
+            > * + * {
+                margin-top: 20px;
+            }
+
+            .dropbuttons {
+                transition: all 200ms;
+                opacity: 1;
+            }
+
+            @media (min-width: 900px) {
+                height: 0px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                opacity: 0;
+            }
+
+            @media (max-height: 450px) {
+                justify-content: start;
+                overflow-y: scroll;
+            }
+
+        }
+
+    }
+
+    position: fixed;
+    width: auto;
+    height: auto;
+    left: 21px;
+    top: 21px;
+    right: 21px;
+    z-index: 10;
+
+    background: rgba(217, 217, 217, 0.04);
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
+    transition: backdrop-filter;
+    backdrop-filter: blur(4px);
+    border-radius: 39px;
+
+    #logo {
+        width: 120px;
+        cursor: pointer;
+    }
+
+    .spacer {
+        flex-grow: 1;
+    }
+
+    #menubutton {
+        display: none;
+    }
+
+    @media (max-width: 900px) {
+        backdrop-filter: blur(8px);
+
+        left: 10px;
+        right: 10px;
+
+        #mainnavcontainer {
+            padding: 0px 25px !important;
+        }
+
+        #menubutton {
+            display: grid;
+            place-items: center;
+            padding: 4px;
+            background: transparent;
+            border-radius: 6px;
+            
+            img {
+                width: 28px;
+            }
+
+        }
+
+        #menubutton:hover {
+            background: rgba(255, 255, 255, 0.125);
+        }
+
+        .mainnavbutton, #spacer2 {
+            display: none;
+        }
+    }
+
+    .navbutton {
+        background: transparent;
+        width: fit-content;
+        border: none;
+        padding: 0 15px;
+        color: white;
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 200ms;
+        border-radius: 7px;
+        text-decoration: none;
+    }
+
+    .navbutton:not(.downloadbutton):hover {
+        background: rgba(255, 255, 255, 0.125);
+    }
+
+    .downloadbutton {
+        background: var(--accent-col);
+        border-radius: 25px;
+        cursor: pointer;
+        border: none;
+        height: 40px;
+        width: 135px;
+        color: white;
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 40px;
+        text-align: center;
+        transition: text-shadow 200ms;
+        text-decoration: none;
+    }
+
+    .downloadbutton:hover {
+        text-shadow: 0px 0px 5px #ffffff;
+    }
+}

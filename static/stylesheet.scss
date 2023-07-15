@@ -1,0 +1,385 @@
+@use "global.scss";
+@use "navbar.scss";
+
+#content {
+
+    #home {
+        
+        #homeimage {
+            position: absolute;
+            left: 40%;
+            top: 57%;
+            width: min(60vw, 1050px);
+            transform: translateY(-50%);
+        }
+
+        @media (max-width: 900px) {
+            #homeimage {
+                display: none;
+            }
+        }
+
+        @media (min-width: 900px) {
+            p {
+                max-width: 32ch;
+            }
+        }
+        
+    }
+
+    #about {
+
+        #aboutimage {
+            position: absolute;
+            left: 2%;
+            top: 57%;
+            width: min(43vw, 880px);
+            transform: translateY(-50%);
+        }
+
+        @media (max-width: 900px) {
+            #aboutimage {
+                display: none;
+            }
+        }
+
+    }
+
+    #development {
+
+        #developmentimage {
+            position: absolute;
+            left: 54%;
+            top: 57%;
+            width: min(45vw, 840px);
+            transform: translateY(-50%);
+        }
+
+        @media (max-width: 900px) {
+            #developmentimage {
+                display: none;
+            }
+        }
+
+    }
+
+    #features {
+
+        .featuresmain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+
+            > * + * {
+                margin-top: 5px;
+            }
+
+            h1 {
+                font-size: clamp(3.5rem, 10vw, 4rem);
+                text-align: right;
+                width: 100%;
+                line-height: 0.9;
+            }
+
+            #progress {
+                height: 4px;
+                width: 100%;
+                background: linear-gradient(90deg, var(--accent-col) 50%, transparent 50.001%);
+                background-size: 200% 200%;
+            }
+
+            .progressing {
+                animation: progress 8000ms ease-in-out infinite;
+            }
+
+            @keyframes progress {
+                0% {
+                    background-position-x: 100%;
+                }
+                100% {
+                    background-position-x: 0%;
+                }
+            }
+
+            .featuresnumlist {
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                font-family: 'Source Sans Pro';
+                font-weight: normal;
+                font-size: 27px;
+                list-style-type: none;
+
+                > * + * {
+                    margin-left: 6px;
+                }
+
+                li {
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+        .wrapper {
+            height: 260px;
+            width: 90vw;
+
+            .textcarousel {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                .minicontainer {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;   
+                    text-align: right;
+                    padding-left: 3rem;
+                    width: 90vw;
+                    height: 260px;
+                    opacity: 0;
+                    transition: opacity 1000ms;
+                    pointer-events: none;
+
+                    h2 {
+                        font-weight: normal;
+                        font-size: clamp(30px, 5vw, 40px);
+                    }
+
+                    p {
+                        max-width: 90vw;
+                    }
+
+                    @media (min-width: 900px) {
+                        p {
+                            max-width: 32ch;
+                        }
+                    }
+
+                }
+
+                .activetext {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
+            }
+
+        }
+
+        @media (max-width: 900px) {
+
+            .featuresmain, .minicontainer, .wrapper {
+                align-items: flex-start !important;
+                text-align: start !important;
+            }
+
+            .minicontainer {
+                padding-left: 0 !important;
+            }
+                
+        }
+
+        img {
+            pointer-events: none;
+        }
+
+        .featureimagesmain {
+            position: absolute;
+            top: 57%;
+            opacity: 0;
+            transition: opacity 1000ms;
+            transform: translateY(-50%);
+        }
+
+        .featureimagesalt, .altimagescontainer {
+            display: none;
+            opacity: 0;
+            transition: opacity 1000ms;
+        }
+
+        .altimagescontainer {
+            position: relative;
+            width: 90vw;
+            height: 60vw;
+
+            img {
+                position: absolute;
+                top: 0; 
+            }
+
+        }
+
+        #feature1img {
+            left: 4%;
+            width: min(58vw, 833px);
+        }
+
+        #feature2img {
+            left: 12%;
+            width: min(45vw, 577px);
+        }
+
+        #feature3img {
+            left: 2%;
+            width: min(60vw, 969px);
+        }
+
+        #feature4img {
+            left: 12%;
+            width: min(602px, 45vw);
+        }
+
+        #feature5img {
+            left: 3%;
+            width: min(55vw, 916px);
+        }
+
+        @media (max-width: 900px) {
+
+            .featureimagesmain {
+                display: none;
+            }
+
+            .featureimagesalt {
+                display: block;
+            }
+
+            .altimagescontainer {
+                display: block;
+                opacity: 1;
+            }
+
+        }
+
+        .activetext {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+    }
+
+    #download {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
+
+        > * + * {
+            margin-top: 20px;
+        }
+
+        .downloadcontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            > * + * {
+                margin-top: 16px;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: min(4rem, 15vw);
+            }
+
+            #downloadbuttons {
+                display: flex;
+                flex-direction: row;
+
+                > * + * {
+                    margin-left: 32px;
+                }
+
+                a {
+                    width: min(313px, 70vw);
+                    height: 92.5px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    border-radius: 17px;
+                    border: none;
+                    transition: 200ms box-shadow;
+                    text-align: center;
+                    text-decoration: none;
+
+                    img {
+                        width: 50px;
+                    }
+
+                    p {
+                        font-family: 'Source Sans Pro';
+                        font-weight: normal;
+                        font-size: 20px;
+                        max-width: none;
+                    }
+
+                    @media (max-width: 400px) {
+                        p {
+                            font-size: 14px;
+                        }
+
+                        height: 70px;
+                    }
+                    
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+                #downloadwindows {
+                    background-color: var(--accent-col);
+                    color: white;
+                }
+
+                #downloadwindows:hover {
+                    box-shadow: 0px 0px 10px var(--accent-col);
+                }
+
+                #viewsource {
+                    background-color: white;
+                    color: black;
+                }
+
+                #viewsource:hover {
+                    box-shadow: 0px 0px 10px white;
+                }
+
+            }
+
+            @media (max-width: 900px) {
+                p {
+                    padding-bottom: 0px;
+                }
+
+                #downloadbuttons {
+                    flex-direction: column;
+
+                    > * + * {
+                        margin-top: 16px;
+                        margin-left: 0px;
+                    }
+
+                }
+            }
+
+        }
+
+        #downloadimg {
+            width: clamp(800px, 90vw, 1170px);
+            object-fit: cover;
+        }
+
+    }
+}
