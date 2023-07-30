@@ -202,6 +202,12 @@ a {
     overflow-y: scroll;
   }
 }
+@supports not (backdrop-filter: blur()) {
+  #navbar {
+    transition: background;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
 #navbar #logo {
   width: 120px;
   cursor: pointer;
@@ -217,6 +223,11 @@ a {
     backdrop-filter: blur(8px);
     left: 10px;
     right: 10px;
+  }
+  @supports not (backdrop-filter: blur()) {
+    #navbar {
+      background: rgba(0, 0, 0, 0.8);
+    }
   }
   #navbar #mainnavcontainer {
     padding: 0px 25px !important;
