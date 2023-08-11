@@ -28,7 +28,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 body {
-  scrollbar-width: 8px;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
   overflow: auto;
 }
@@ -62,7 +61,7 @@ a {
   .section {
       width: min(100%, 1800px);
       min-height: 100vh;
-      font-family: 'Source Sans Pro';
+      font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       font-weight: normal;
       color: white;
       overflow: hidden;
@@ -71,10 +70,7 @@ a {
       .container {
           width: 100%;
           min-height: 100vh;
-          padding-left: clamp(1rem, 5vw, 4rem);
-          padding-right: clamp(1rem, 5vw, 4rem);
-          padding-top: 6rem;
-          padding-bottom: 5rem;
+          padding: 6rem clamp(1rem, 5vw, 4rem) 5rem;
           display: flex;
           flex-direction: column;
           align-items: flex-start;

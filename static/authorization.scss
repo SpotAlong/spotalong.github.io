@@ -8,7 +8,7 @@
         .container {
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 0px;
+            padding-bottom: 0;
             padding-top: 8rem;
             min-height: 100vh;
 
@@ -27,7 +27,7 @@
 
                     > * + * {
                         margin-top: 30px;
-                        margin-left: 0px;
+                        margin-left: 0;
                     }
 
                 }
@@ -64,7 +64,7 @@
                     }
 
                     p {
-                        padding-bottom: 0rem !important;
+                        padding-bottom: 0 !important;
                     }
 
                     #codelabel {
@@ -74,7 +74,7 @@
                         border-radius: 30px;
                         display: grid;
                         place-items: center;
-                        box-shadow: rgba(0, 0, 0, 25%) 0px 4px 15px;
+                        box-shadow: rgba(0, 0, 0, 25%) 0 4px 15px;
 
                         p {
                             font-size: 53px;
@@ -84,7 +84,7 @@
                         }
 
                         #lastletter {
-                            letter-spacing: 0em;
+                            letter-spacing: 0;
                         }
 
                         @media (max-width: 400px) {

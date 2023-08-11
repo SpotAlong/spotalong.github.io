@@ -29,7 +29,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  scrollbar-width: 8px;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
   overflow: auto;
 }
@@ -62,7 +61,7 @@ a {
 #content .section {
   width: min(100%, 1800px);
   min-height: 100vh;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   color: white;
   overflow: hidden;
@@ -71,10 +70,7 @@ a {
 #content .section .container {
   width: 100%;
   min-height: 100vh;
-  padding-left: clamp(1rem, 5vw, 4rem);
-  padding-right: clamp(1rem, 5vw, 4rem);
-  padding-top: 6rem;
-  padding-bottom: 5rem;
+  padding: 6rem clamp(1rem, 5vw, 4rem) 5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -150,7 +146,7 @@ a {
   right: 21px;
   z-index: 10;
   background: rgba(217, 217, 217, 0.04);
-  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
   transition: backdrop-filter;
   backdrop-filter: blur(4px);
   border-radius: 39px;
@@ -164,20 +160,20 @@ a {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 0px 15px;
+  padding: 0 15px;
   height: 3.5rem;
 }
 #navbar #navcontainer #mainnavcontainer > * + * {
   margin-left: 10px;
 }
 #navbar #navcontainer #dropdownnavcontainer {
-  height: 0px;
+  height: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
   overflow-y: hidden;
   transition: 500ms;
 }
@@ -190,9 +186,9 @@ a {
 }
 @media (min-width: 900px) {
   #navbar #navcontainer #dropdownnavcontainer {
-    height: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     opacity: 0;
   }
 }
@@ -230,7 +226,7 @@ a {
     }
   }
   #navbar #mainnavcontainer {
-    padding: 0px 25px !important;
+    padding: 0 25px !important;
   }
   #navbar #menubutton {
     display: grid;
@@ -255,7 +251,7 @@ a {
   border: none;
   padding: 0 15px;
   color: white;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -277,7 +273,7 @@ a {
   height: 40px;
   width: 135px;
   color: white;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -287,7 +283,7 @@ a {
   text-decoration: none;
 }
 #navbar .downloadbutton:hover {
-  text-shadow: 0px 0px 5px #ffffff;
+  text-shadow: 0 0 5px #ffffff;
 }
 
 #content #home #homeimage {
@@ -360,14 +356,14 @@ a {
     background-position-x: 100%;
   }
   100% {
-    background-position-x: 0%;
+    background-position-x: 0;
   }
 }
 #content #features .featuresmain .featuresnumlist {
   display: flex;
   flex-direction: row;
   justify-content: right;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   font-size: 27px;
   list-style-type: none;
@@ -389,8 +385,8 @@ a {
 }
 #content #features .wrapper .textcarousel .minicontainer {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -534,7 +530,7 @@ a {
   width: 50px;
 }
 #content #download .downloadcontainer #downloadbuttons a p {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   font-size: 20px;
   max-width: none;
@@ -556,25 +552,25 @@ a {
   color: white;
 }
 #content #download .downloadcontainer #downloadbuttons #downloadwindows:hover {
-  box-shadow: 0px 0px 10px var(--accent-col);
+  box-shadow: 0 0 10px var(--accent-col);
 }
 #content #download .downloadcontainer #downloadbuttons #viewsource {
   background-color: white;
   color: black;
 }
 #content #download .downloadcontainer #downloadbuttons #viewsource:hover {
-  box-shadow: 0px 0px 10px white;
+  box-shadow: 0 0 10px white;
 }
 @media (max-width: 900px) {
   #content #download .downloadcontainer p {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   #content #download .downloadcontainer #downloadbuttons {
     flex-direction: column;
   }
   #content #download .downloadcontainer #downloadbuttons > * + * {
     margin-top: 16px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 #content #download #downloadimg {
