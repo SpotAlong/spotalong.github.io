@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -513,7 +514,19 @@ a {
 #content #download .downloadcontainer #downloadbuttons > * + * {
   margin-left: 32px;
 }
-#content #download .downloadcontainer #downloadbuttons a {
+#content #download .downloadcontainer #downloadbuttons #downloadwindowswrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#content #download .downloadcontainer #downloadbuttons #downloadwindowswrapper #downloadinfo {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  max-width: none;
+  padding-top: 5px;
+}
+#content #download .downloadcontainer #downloadbuttons .downloadbuttons {
   width: min(313px, 70vw);
   height: 92.5px;
   display: flex;
@@ -526,20 +539,20 @@ a {
   text-align: center;
   text-decoration: none;
 }
-#content #download .downloadcontainer #downloadbuttons a img {
+#content #download .downloadcontainer #downloadbuttons .downloadbuttons img {
   width: 50px;
 }
-#content #download .downloadcontainer #downloadbuttons a p {
+#content #download .downloadcontainer #downloadbuttons .downloadbuttons p {
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   font-size: 20px;
   max-width: none;
 }
 @media (max-width: 400px) {
-  #content #download .downloadcontainer #downloadbuttons a {
+  #content #download .downloadcontainer #downloadbuttons .downloadbuttons {
     height: 70px;
   }
-  #content #download .downloadcontainer #downloadbuttons a p {
+  #content #download .downloadcontainer #downloadbuttons .downloadbuttons p {
     font-size: 14px;
   }
 }

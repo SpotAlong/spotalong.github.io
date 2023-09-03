@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="static/favicon.png"/>
     <title>SpotAlong</title>
     <meta name="description" content="SpotAlong allows you to listen along to your friends on Spotify, and discover new music interests and tastes - without needing premium.">
     <!--Facebook -->
-    <meta property="og:url" content="">
+    <meta property="og:url" content="https://spotalong.github.io">
     <meta property="og:type" content="website">
     <meta property="og:title" content="SpotAlong">
     <meta property="og:description" content="SpotAlong allows you to listen along to your friends on Spotify, and discover new music interests and tastes - without needing premium.">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="https://spotalong.github.io/static/Group%201.png">
     <!--Twitter-->
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="">
-    <meta property="twitter:url" content="">
+    <meta property="twitter:domain" content="https://spotalong.github.io">
+    <meta property="twitter:url" content="https://spotalong.github.io">
     <meta name="twitter:title" content="SpotAlong">
     <meta name="twitter:description" content="SpotAlong allows you to listen along to your friends on Spotify, and discover new music interests and tastes - without needing premium.">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:image" content="https://spotalong.github.io/static/Group%201.png">
     <link rel="stylesheet" href="static/stylesheet.css">
     <script src="static/main.js" defer></script>
 </head>
@@ -79,9 +76,9 @@
                 <div class="container">
                     <h1><span class="gradienttext">Development</span></h1>
                     <p>SpotAlong has been in active development since October 2020, with 500+ hours of development time and 14000+ lines of code written. SpotAlong has also directly created an open source project, 
-                    <a href="https://github.com/CriticalElement/spotify-free-api-player">spotify-free-api-player</a>, which allows users to change their playback state using the playback controller and sync their Spotify state to their friend's when listening along. 
+                    <a href="https://github.com/CriticalElement/spotify-free-api-player">spotify-free-api-player</a>, which allows users to change their playback state using the playback controller and sync their Spotify state to their friends' when listening along.
                     <br/>
-                    In the near future, group listening sessions will gain more support through features like song requests and vote skips, further enhancing the listening along experience beyond any other competitor- all without needing premium.</p>
+                    In the near future, group listening sessions will gain more support through features like song requests and vote skips, further enhancing the listening along experience beyond any other competitor - all without needing premium.</p>
                     <img src="static/Group 3.png" alt="Picture of the source code.">
                 </div>
                 <img id="developmentimage" src="static/Group 3.png" alt="Picture of the source code.">
@@ -124,7 +121,7 @@
                                     Playback Controller
                                 </h2>
                                 <p>
-                                    SpotAlong has a built in playback controller that allows you to control Spotify, even on multiple devices.*<br><br><span style="font-size: 12px">*Premium restrictions may still apply.</span>
+                                    SpotAlong has a built-in playback controller that allows you to control Spotify, even on multiple devices.*<br><br><span style="font-size: 12px">*Premium restrictions may still apply.</span>
                                 </p>
                             </div>
                             <div class="minicontainer">
@@ -164,21 +161,26 @@
             <section class="section" id="download">
                 <div class="downloadcontainer">
                     <h1><span class="gradienttext">Download</span></h1>
-                    <div id="downloadbuttons">
-                        <a id="downloadwindows">
-                            <img src="static/windows logo.png" alt="Windows logo">
-                            <p>
-                                Download for Windows<br/>(v1.0.0)
-                            </p> 
-                        </a>
-                        <a id="viewsource" href="https://github.com/SpotAlong/SpotAlong-Client">
-                            <img src="static/github logo.png" alt="GitHub logo">
-                            <p>
-                                View Source Repository<br/>(github.com)
-                            </p>
-                        </a>
+                        <div id="downloadbuttons">
+                            <div id="downloadwindowswrapper">
+                                <a id="downloadwindows" href="https://github.com/SpotAlong/SpotAlong-Client/releases/download/v1.0.0/SpotAlong-Installer.exe" class="downloadbuttons">
+                                    <img src="static/windows logo.png" alt="Windows logo">
+                                    <p>
+                                        Download for Windows<br/>(v1.0.0)
+                                    </p>
+                                </a>
+                                <p id="downloadinfo">
+                                    Sep 3, 2023  •  <a href="https://github.com/SpotAlong/SpotAlong-Client/releases">View previous releases</a>
+                                </p>
+                            </div>
+                            <a id="viewsource" href="https://github.com/SpotAlong/SpotAlong-Client" class="downloadbuttons">
+                                <img src="static/github logo.png" alt="GitHub logo">
+                                <p>
+                                    View Source Repository<br/>(github.com)
+                                </p>
+                            </a>
+                        </div>
                     </div>
-                </div>
                 <img id="downloadimg" src="static/Group 4.png" alt="Collage of SpotAlong screenshots">
             </section>
         </div>
