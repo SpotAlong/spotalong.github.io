@@ -287,6 +287,9 @@ a {
   text-shadow: 0 0 5px #ffffff;
 }
 
+#content #home h1 {
+  line-height: 1.2;
+}
 #content #home #homeimage {
   position: absolute;
   left: 40%;
