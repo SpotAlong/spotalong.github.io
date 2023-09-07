@@ -62,7 +62,7 @@ a {
 #content .section {
   width: min(100%, 1800px);
   min-height: 100vh;
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Source Sans 3", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   color: white;
   overflow: hidden;

@@ -62,7 +62,7 @@ a {
 #content .section {
   width: min(100%, 1800px);
   min-height: 100vh;
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Source Sans 3", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   color: white;
   overflow: hidden;
@@ -252,7 +252,7 @@ a {
   border: none;
   padding: 0 15px;
   color: white;
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Source Sans 3", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -274,7 +274,7 @@ a {
   height: 40px;
   width: 135px;
   color: white;
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Source Sans 3", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
