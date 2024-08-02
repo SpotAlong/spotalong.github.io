@@ -1,4 +1,4 @@
 {
-    "BASE_URL":  "https://spotalong-tj6cy.ondigitalocean.app/api",
-    "REGULAR_BASE": "https://spotalong-tj6cy.ondigitalocean.app/"
+    "BASE_URL":  "https://spotalong.herokuapp.com/api",
+    "REGULAR_BASE": "https://spotalong.herokuapp.com/"
 }
